@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   headerContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    minHeight: 216,
+    minHeight: 200,
     backgroundColor: '#3366FF',
   },
   signInLabel: {

@@ -13,8 +13,10 @@ export const UserStat = (props: UserStatProps): React.ReactElement => {
 
   return (
     <View {...viewProps} style={[styles.container, style]}>
-      <Text category="s2">{value}</Text>
-      <Text appearance="hint" category="c2">
+      <Text category="s2" status="control">
+        {value}
+      </Text>
+      <Text appearance="hint" category="c2" status="control">
         {props.hint}
       </Text>
     </View>
@@ -26,3 +28,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
+
+export default UserStat;

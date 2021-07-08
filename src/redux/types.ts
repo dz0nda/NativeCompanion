@@ -10,6 +10,29 @@ export interface AchievementsInfos {
   visible: boolean;
 }
 
+export interface ProjectsDetailsInfos {
+  id: number;
+  name: string;
+  parent_id: number;
+  slug: string;
+}
+
+export interface ProjectsInfos {
+  created_at: string;
+  current_team_id: number;
+  cursus_ids: Array<number>;
+  final_mark: number;
+  id: number;
+  marked: boolean;
+  marked_at: string;
+  occurrence: number;
+  project: ProjectsDetailsInfos;
+  retriable_at: string;
+  status: string;
+  updated_at: string;
+  'validated?': boolean;
+}
+
 export interface UserInfos {
   id?: number;
   email?: string;
@@ -32,8 +55,8 @@ export interface UserInfos {
   created_at?: string;
   updated_at?: string;
   groups?: Array<any>;
-  cursus_users?: Array<any>;
-  projects_users?: Array<any>;
+  cursus_users?: Array<CursusInfos>;
+  projects_users?: Array<ProjectsInfos>;
   languages_users?: Array<any>;
   titles?: Array<any>;
   titles_users?: Array<any>;
@@ -54,3 +77,32 @@ export interface UsersInfos {
   updated_at?: string;
   url?: string;
 }
+
+export interface SkillsInfos {
+  id: string;
+  level: number;
+  name: string;
+}
+
+export interface CursusInfos {
+  begin_at: string;
+  blackholed_at: string;
+  created_at: string;
+  cursus: {
+    created_at: string;
+    id: 21;
+    name: string;
+    slug: string;
+  };
+  cursus_id: 21;
+  end_at: null;
+  grade: string;
+  has_coalition: true;
+  id: 96460;
+  level: 12.88;
+  skills: Array<SkillsInfos>;
+  updated_at: string;
+  user: UsersInfos;
+}
+
+export type StatusProps = 'idle' | 'loading' | 'success' | 'failed';
