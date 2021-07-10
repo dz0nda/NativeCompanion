@@ -67,7 +67,7 @@ export interface UserInfos {
   roles?: Array<any>;
   campus?: Array<any>;
   campus_users?: Array<any>;
-  achievements?: Array<AchievementsInfos>;
+  achievements: Array<AchievementsInfos>;
 }
 
 export interface UsersInfos {
@@ -90,16 +90,16 @@ export interface CursusInfos {
   created_at: string;
   cursus: {
     created_at: string;
-    id: 21;
+    id: number;
     name: string;
     slug: string;
   };
-  cursus_id: 21;
-  end_at: null;
+  cursus_id: number;
+  end_at: string;
   grade: string;
-  has_coalition: true;
-  id: 96460;
-  level: 12.88;
+  has_coalition: boolean;
+  id: number;
+  level: number;
   skills: Array<SkillsInfos>;
   updated_at: string;
   user: UsersInfos;

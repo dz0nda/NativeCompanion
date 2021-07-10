@@ -29,7 +29,8 @@ const initialState: AppState = {
   token: '',
   auth: {},
   users: [],
-  user: mockUser,
+  user: {},
+  // user: mockUser,
 };
 
 export const requestToken = createAsyncThunk(
@@ -110,7 +111,26 @@ export const appSlice = createSlice({
 
 export const selectStatus = (state: RootState) => state.app.status;
 export const selectUsers = (state: RootState) => state.app.users;
+
 export const selectUser = (state: RootState) => state.app.user;
+export const selectUserHeader = (state: RootState) => {
+  return {
+    login: state.app.user.login,
+    last_name: state.app.user.last_name,
+    first_name: state.app.user.first_name,
+    image_url: state.app.user.image_url,
+    pool_year: state.app.user.pool_year,
+    wallet: state.app.user.wallet,
+    correction_point: state.app.user.correction_point,
+  };
+};
+export const selectUserAchievements = (state: RootState) =>
+  state.app.user.achievements;
+export const selectUserCursus = (state: RootState) =>
+  state.app.user.cursus_users;
+export const selectUserProjects = (state: RootState) =>
+  state.app.user.projects_users;
+
 export const selectAuth = (state: RootState) => state.app.auth;
 
 export default appSlice.reducer;
