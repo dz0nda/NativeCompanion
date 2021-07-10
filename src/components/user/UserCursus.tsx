@@ -11,7 +11,7 @@ import {
 
 import {CursusInfos, ProjectsInfos} from '../../redux/types';
 
-import UserStat from '../common/UserStat';
+import BoxInfo from '../common/BoxInfo';
 import UserProjects from './UserProjects';
 import UserSkills from './UserSkills';
 
@@ -43,8 +43,8 @@ export const SelectDisplayValueShowcase = (props: UserCursusProps) => {
           {props.cursus.map(renderSelectCursus)}
         </Select>
         <View style={styles.containerHeader}>
-          <UserStat hint="level" value={`${cursus.level}`} />
-          <UserStat hint="grade" value={`${cursus.grade}`} />
+          <BoxInfo hint="level" value={`${cursus.level}`} />
+          <BoxInfo hint="grade" value={`${cursus.grade}`} />
         </View>
       </Layout>
 

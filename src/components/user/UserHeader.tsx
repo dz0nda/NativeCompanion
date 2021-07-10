@@ -3,7 +3,7 @@ import {StyleSheet, View} from 'react-native';
 import {Layout, Text, Avatar} from '@ui-kitten/components';
 
 import {UserInfos} from '../../redux/types';
-import {UserStat} from '../common/UserStat';
+import {BoxInfo} from '../common/BoxInfo';
 
 export interface UserHeaderProps2 {
   login: string;
@@ -38,9 +38,9 @@ export const UserHeader = (props: UserHeaderProps): React.ReactElement => {
         />
       </View>
       <View style={styles.headerBottom}>
-        <UserStat hint="pool year" value={`${user.pool_year}`} />
-        <UserStat hint="wallet" value={`${user.wallet}`} />
-        <UserStat hint="correction point" value={`${user.correction_point}`} />
+        <BoxInfo hint="pool year" value={`${user.pool_year}`} />
+        <BoxInfo hint="wallet" value={`${user.wallet}`} />
+        <BoxInfo hint="correction point" value={`${user.correction_point}`} />
       </View>
     </Layout>
   );
