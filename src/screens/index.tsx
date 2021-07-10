@@ -11,12 +11,12 @@ export default () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen
           name="User"
           component={UserScreen}
           options={{title: 'User'}}
         />
-        <Stack.Screen name="Home" component={HomeScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
