@@ -52,7 +52,7 @@ export const UserSkills = (props: UserSkillsProps): React.ReactElement => {
     <PieChart
       data={chartData}
       width={windowWidth}
-      height={220}
+      height={200}
       chartConfig={chartConfig}
       accessor={'level'}
       backgroundColor={'transparent'}
