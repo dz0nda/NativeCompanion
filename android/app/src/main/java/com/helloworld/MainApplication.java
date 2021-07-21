@@ -1,4 +1,4 @@
-package com.explorer42;
+package com.nativecompanion;
 
 import android.app.Application;
 import android.content.Context;
@@ -48,7 +48,7 @@ public class MainApplication extends Application implements ReactApplication {
   }
 
   /**
-   * Loads Flipper in React Native explorer42s. Call this in the onCreate method with something like
+   * Loads Flipper in React Native nativecompanions. Call this in the onCreate method with something like
    * initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
    *
    * @param context
@@ -62,7 +62,7 @@ public class MainApplication extends Application implements ReactApplication {
          We use reflection here to pick up the class that initializes Flipper,
         since Flipper library is not available in release mode
         */
-        Class<?> aClass = Class.forName("com.explorer42.ReactNativeFlipper");
+        Class<?> aClass = Class.forName("com.nativecompanion.ReactNativeFlipper");
         aClass
             .getMethod("initializeFlipper", Context.class, ReactInstanceManager.class)
             .invoke(null, context, reactInstanceManager);

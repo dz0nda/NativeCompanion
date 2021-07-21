@@ -1,4 +1,4 @@
-package com.explorer42;
+package com.nativecompanion;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "explorer42";
+    return "nativecompanion";
   }
 }
