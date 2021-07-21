@@ -19,21 +19,23 @@ export async function getToken() {
     console.log(new Date(res.data.created_at));
     return res.data;
   } catch (err) {
+    console.error('getToken', err);
+
     throw err;
-    //return console.error(err);
   }
 }
 
 export async function checkToken(token: string) {
   try {
-    const res = await axios.post(
+    const res = await axios.get(
       `${API_URL}/oauth/token/info`,
       configHeader(token),
     );
     return res.data;
   } catch (err) {
+    console.error('checkToken', err);
+
     throw err;
-    // return console.error(err);
   }
 }
 
@@ -48,7 +50,7 @@ export async function getUsersFilter(login: string, token: string) {
     }
     return res.data;
   } catch (err) {
-    console.log(err);
+    console.log('getUsersFilter', err);
 
     throw err;
   }
@@ -60,11 +62,11 @@ export async function getUserById(id: number, token: string) {
       `${API_URL}/v2/users/${id}`,
       configHeader(token),
     );
-    console.log(res.data);
 
     return res.data;
   } catch (err) {
+    console.error('getUserById', err);
+
     throw err;
-    //return console.error(err);
   }
 }
