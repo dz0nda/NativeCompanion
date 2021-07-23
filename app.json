@@ -1,4 +1,12 @@
 {
-  "name": "nativecompanion",
-  "displayName": "nativecompanion"
+  "name": "NativeCompanion",
+  "displayName": "NativeCompanion",
+  "expo": {
+    "name": "NativeCompanion",
+    "slug": "NativeCompanion",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
 }
